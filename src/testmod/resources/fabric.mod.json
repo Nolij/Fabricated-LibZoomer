@@ -1,0 +1,26 @@
+{
+	"schemaVersion": 1,
+	"id": "libzoomer_test",
+	"license": "OSL-3.0",
+	"version": "${version}",
+	"name": "Fabricated LibZoomer Test mod",
+	"description": "LibZoomer test mod for Fabric",
+	"authors": [
+		"EnnuiL",
+		"embeddedt",
+		"Nolij"
+	],
+	"entrypoints": {
+		"main": [
+			"io.github.ennuil.libzoomer_test.LibZoomerTestMod"
+		],
+		"client": [
+			"io.github.ennuil.libzoomer_test.LibZoomerTestMod"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.14.10",
+		"minecraft": "1.20.x",
+		"fabric": "*"
+	}
+}

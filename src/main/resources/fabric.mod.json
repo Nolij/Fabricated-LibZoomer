@@ -1,0 +1,32 @@
+{
+	"schemaVersion": 1,
+	"id": "libzoomer",
+	"license": "OSL-3.0",
+	"version": "${version}",
+	"name": "Fabricated LibZoomer",
+	"description": "A library that allows for easy and powerful zooming.",
+	"authors": ["EnnuiL", "embeddedt", "Nolij"],
+	"contact": {
+		"homepage": "https://github.com/Nolij/Fabricated-LibZoomer",
+		"issues": "https://github.com/Nolij/Fabricated-LibZoomer/issues",
+		"sources": "https://github.com/Nolij/Fabricated-LibZoomer"
+	},
+	"depends": {
+	  "fabricloader": ">=0.14.10",
+	  "minecraft": "1.20.x",
+	  "fabric": "*"
+	},
+	"breaks": {
+		"quilt_loader": "*"
+	},
+	"mixins": [
+	  "libzoomer.mixins.json"
+	],
+	"custom": {
+		"modmenu": {
+			"badges": [
+				"library"
+			]
+		}
+	}
+}

@@ -1,6 +1,9 @@
 {
 	"replace": false,
 	"values": [
-		"minecraft:spyglass"
+		{
+			"id": "minecraft:spyglass",
+			"required": false
+		}
 	]
 }

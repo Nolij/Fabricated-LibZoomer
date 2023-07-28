@@ -1,5 +1,6 @@
 package io.github.ennuil.libzoomer.mixin;
 
+import net.fabricmc.fabric.api.tag.client.v1.ClientTags;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -17,7 +18,7 @@ public abstract class ModelPredicateProviderRegistryMixin {
 			entity != null
 				&& entity.isUsingItem()
 				&& entity.getActiveItem() == stack
-				&& entity.getActiveItem().isIn(SpyglassHelper.SPYGLASSES)
+				&& ClientTags.isInWithLocalFallback(SpyglassHelper.SPYGLASSES, entity.getActiveItem().getItem())
 				? 1.0F
 				: 0.0F
 		);

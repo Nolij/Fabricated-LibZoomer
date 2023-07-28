@@ -1,26 +1,17 @@
 <img src="./src/main/resources/assets/libzoomer/icon.png" align="right" width="128px"/>
 
-# LibZoomer
+# Fabricated LibZoomer
 
-A library that allows other mods to create zooms and custom spyglasses easily. The current supported version is Minecraft 1.20.
-
-## Usage
-
-**WARNING:** This API is still not finished and breaking changes may happen until a 1.0.0 release happens!
-
-This library is available through Maven Central and Jitpack. If none of these options work, consider using local Maven on the source code of a released version.
-
-LibZoomer provides zooming through zoom instances, which contains three sub-instances: transition modes, mouse modifiers and zoom overlays. A zoom instance can be created with different subinstances, which can be either provided by the library or implemented by the mod itself. In order to a zoom instance to be functional, it must be registered by the ZoomRegistry. In order to make the instance zoom in, the instance's zoom state must be set to true, which can be done using the `setZoom` method, the vice-versa can be done by setting it to false.
-
-A better guide will be written later, feel free to take a look on this mod's testmod if you want an example!
+This is a fork of [EnnuiL](https://github.com/EnnuiL)'s [LibZoomer](https://github.com/EnnuiL/LibZoomer). It is meant to be a bug-for-bug port that simply allows this mod to work on Fabric loader as it originally did. I created this with no ill intent, I simply don't want to use Quilt Loader and I haven't found a good enough alternative to LibZoomer that supports Fabric.
 
 ## Download
 
-This mod is meant to be JiJ'd by mods, so you wouldn't need to download it at all in most cases. If you really need to download it, it's available in the following services:
+I currently have not published this mod to CurseForge or Modrinth as I do not want to make profit from this, and if I ever do, [EnnuiL](https://github.com/EnnuiL) is free to reach out and request any monetization money the mod page(s) accumulate (which I will not be cashing out). Send donations to [EnnuiL](https://github.com/EnnuiL). This is her mod.
 
-- [Modrinth (recommended)](https://modrinth.com/mod/libzoomer)
-- [GitHub Releases (alternative)](https://github.com/EnnuiL/LibZoomer/releases)
+Please only use this mod on the Fabric Loader. It did technically work on the Quilt Loader in my testing, but as this is a bug-for-bug port you really should just use the upstream version.
+
+As such, for the time being, you will have to build this mod for yourself if you wish to use it, as I don't care to manually create releases.
 
 ## License
 
-This mod is licensed under the MIT license. You can freely Jar-in-Jar this mod on any mod with no permission. Usage of this mod's code on other projects or derivatives of this mod is allowed as long as attribution is given.
+See [LICENSE](LICENSE).

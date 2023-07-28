@@ -1,5 +1,6 @@
 package io.github.ennuil.libzoomer.mixin;
 
+import net.fabricmc.fabric.api.tag.client.v1.ClientTags;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -20,7 +21,7 @@ public abstract class PlayerHeldItemFeatureRendererMixin {
 	@Inject(method = "renderItem", at = @At("HEAD"), cancellable = true)
 	private void renderCustomSpyglassesAsSpyglass(LivingEntity entity, ItemStack stack, ModelTransformationMode modelTransformationMode, Arm arm,
 												  MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, CallbackInfo ci) {
-		if (stack.isIn(SpyglassHelper.SPYGLASSES) && entity.getActiveItem() == stack && entity.handSwingTicks == 0) {
+		if (ClientTags.isInWithLocalFallback(SpyglassHelper.SPYGLASSES, stack.getItem()) && entity.getActiveItem() == stack && entity.handSwingTicks == 0) {
 			this.renderSpyglass(entity, stack, arm, matrices, vertexConsumers, light);
 			ci.cancel();
 		}
